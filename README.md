@@ -13,7 +13,7 @@ To run this docker
 
 To edit configurations and all , better you need to mount rundeck volumes to your host . For that,
 
->docker run -privileged -d -v /your/host/dir/:/var/rundeck -v /your/host/dir/:/etc/rundeck -p 4440:4440/tcp jamesarems/rundeck-latest
+>docker run -privileged -d -v /your/host/dir/:/var/rundeck -v /your/host/dir/:/etc/rundeck -p 22:22/tcp -p 4440:4440/tcp jamesarems/rundeck-latest
 
 *Docker Link*
 
