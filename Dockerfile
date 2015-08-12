@@ -14,8 +14,7 @@ EXPOSE 4443/tcp
 EXPOSE 22/tcp
 
 #Adding volume
-VOLUME /var/rundeck/
-VOLUME /etc/rundeck/
+VOLUME ["/etc/rundeck", "/var/rundeck", "/var/lib/rundeck"]
 
 #Running final script
 ENTRYPOINT ["/usr/start.sh"]
