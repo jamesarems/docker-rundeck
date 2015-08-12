@@ -1,5 +1,5 @@
 #Creating Images for Rundeck 
-FROM jamesarems/ubuntu:latest
+FROM jamesarems/rundeck:latest
 MAINTAINER James PS <jamesarems@gmail.com>
 
 #Running important commands
