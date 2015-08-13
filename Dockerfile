@@ -13,6 +13,14 @@ EXPOSE 4440/tcp
 EXPOSE 4443/tcp
 EXPOSE 22/tcp
 
+#Special
+RUN mkdir -p /rundeck/etc/
+RUN mkdir -p /rundeck/var/
+RUN mkdir -p /rundeck/lib/
+RUN cp -rpf /etc/rundeck/* /rundeck/etc/
+RUN cp -rpf /var/rundeck/* /rundeck/var/
+RUN cp -rpf /var/lib/rundeck/* /rundeck/lib/
+
 #Adding volume
 VOLUME ["/etc/rundeck", "/var/rundeck", "/var/lib/rundeck"]
 
