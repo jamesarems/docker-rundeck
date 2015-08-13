@@ -7,6 +7,9 @@ RUN apt-get update
 RUN rm -rf /usr/start.sh
 COPY ./start.sh /usr/start.sh
 RUN chmod +x /usr/start.sh
+COPY ./run.sh /opt/run.sh
+RUN chmod +x /opt/run.sh
+#RUN apt-get install cron -y
 
 #Exposing tcp ports
 EXPOSE 4440/tcp
