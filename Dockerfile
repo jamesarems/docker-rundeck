@@ -20,6 +20,7 @@ RUN mkdir -p /rundeck/lib/
 RUN cp -rpf /etc/rundeck/* /rundeck/etc/
 RUN cp -rpf /var/rundeck/* /rundeck/var/
 RUN cp -rpf /var/lib/rundeck/* /rundeck/lib/
+RUN usermod -G root rundeck
 
 #Adding volume
 VOLUME ["/etc/rundeck", "/var/rundeck", "/var/lib/rundeck"]
